@@ -1,4 +1,4 @@
-<div class="cards snaps-inline">
+<div class="cards snaps-inline swiper-wrapper">
   {{#each items}}
   <div class="card">
     <div class="card__image-wrap">
@@ -53,13 +53,16 @@
       <div class="card__title">
         <a href="#!" title="{{title}}">{{title}}</a>
       </div>
-      <div class="card__brand">
-        {{shortName}}
-      </div>
+      <div class="card__brand">{{shortName}}</div>
       <div class="card__price">
-        {{price}}&nbsp;<span class="currency"><span class="ruble">₽</span></span>
+        {{price}}&nbsp;<span class="currency"
+          ><span class="ruble">₽</span></span
+        >
       </div>
     </div>
   </div>
   {{/each}}
 </div>
+
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
