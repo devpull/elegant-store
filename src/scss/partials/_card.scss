@@ -1,29 +1,29 @@
-.cards {
-  display: grid;
-  grid-auto-flow: column;
-  // grid-auto-columns: 25%;
-  column-gap: rem(24);
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
+.card {
 
-  &__item {
-    min-width: rem(262);
-    
-    img {
-      object-fit: cover;
-      aspect-ratio: 262 / 349;
-    }
+  min-width: rem(262);
+  display: flex;
+  flex-direction: column;
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 262 / 349;
   }
+
 
   &__image-wrap {
     position: relative;
+    margin-bottom: rem(12);
   }
 
   &__row {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: end;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
   }
 
   &__controls {
@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: opacity .05s ease-in;
 
     &:hover {
       opacity: 1;
@@ -57,11 +58,38 @@
     cursor: pointer;
   }
 
-  &.snaps-inline {
-    scroll-snap-type: inline mandatory;
+  &__rating {
+    // margin-bottom: rem(4);
   }
 
-  &.snaps-inline>* {
-    scroll-snap-align: start;
+  &__title {
+    // margin-bottom: rem(4);
+
+    a {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: lh(26, 16);
+      text-decoration: none;
+      color: var(--clr-card-text);
+    }
+  }
+
+  &__brand {
+    // margin-bottom: rem(4);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: lh(26, 16);
+    color: var(--clr-card-text);
+  }
+
+  &__price {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: lh(22, 14);
+    color: var(--clr-card-text);
   }
 }

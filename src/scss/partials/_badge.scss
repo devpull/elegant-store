@@ -3,6 +3,7 @@
   padding: em(4, 16) em(14, 16);
   margin-bottom: rem(8);
   background-color: var(--clr-badge-back-default);
+  border-radius: 4px;
   
   color: var(--clr-badge-text-dark);
   font-size: 1rem;
@@ -10,8 +11,7 @@
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
-
-  border-radius: 4px;
+  text-transform: uppercase;
 
   &--success {
     background-color: var(--clr-badge-success);
