@@ -40,5 +40,8 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "swiper": "^11.1.14"
   }
 }
