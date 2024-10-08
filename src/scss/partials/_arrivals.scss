@@ -1,0 +1,15 @@
+.arrivals {
+  padding: rem(48) 0;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(48);
+  }
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

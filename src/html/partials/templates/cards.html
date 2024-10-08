@@ -1,0 +1,44 @@
+<div class="cards snaps-inline">
+  {{#each items}}
+  <div class="cards__item">
+    <div class="cards__image-wrap">
+      <a href="#!">
+        <div class="cards__controls">
+          <div class="cards__row">
+            <div>
+              <span class="badge">NEW</span><br>
+              <span class="badge badge--success">-50%</span>
+            </div>
+            <button class="cards__like">
+              {{#if favourite}}
+              <svg class="svg-icons--fav-full-dims">
+                <use xlink:href="./img/svg/symbol.sprite.svg#icons--fav-full"></use>
+              </svg>
+              {{else}}
+              <svg class="svg-icons--fav-dims">
+                <use xlink:href="./img/svg/symbol.sprite.svg#icons--fav"></use>
+              </svg>
+              {{/if}}
+            </button>
+          </div>
+          <button class="btn btn--to-cart">В корзину</button>
+        </div>
+        <picture>
+          <source
+            srcset="
+              {{root}}{{../imagesPath}}{{image}}.webp    1x,
+              {{root}}{{../imagesPath}}{{image}}@2x.webp 2x
+            "
+          />
+          <img
+            src="{{root}}{{../imagesPath}}{{image}}.jpg"
+            srcset="{{root}}{{../imagesPath}}{{image}}@2x.jpg 2x"
+            alt="image {{image}}"
+          />
+        </picture>
+      </a>
+    </div>
+    <a href="#!">{{title}}</a>
+  </div>
+  {{/each}}
+</div>

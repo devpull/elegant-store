@@ -1,0 +1,29 @@
+.dots {
+  display: flex;
+  column-gap: rem(12);
+
+  &__dot {
+    width: rem(16);
+    height: rem(16);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      display: block;
+      content: "";
+      width: rem(8);
+      height: rem(8);
+      background-color: var(--clr-dots-inactive-back);
+      border-radius: 50%;
+    }
+
+    &--active {
+      border: 1px solid var(--clr-dots-active);
+      &::before {
+        background-color: var(--clr-dots-active);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{calc($pixels / $context)}rem;
+}
+
+@function lh($pixels, $context: $browser-context) {
+  @return calc($pixels / $context);
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{calc($pixels / $context)}em;
+}

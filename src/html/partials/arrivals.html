@@ -1,0 +1,13 @@
+<section class="arrivals">
+  <div class="container">
+    <div class="arrivals__row">
+      <h4 class="arrivals__header">Новые поступления</h4>
+      <div class="dots">
+        <div class="dots__dot dots__dot--active"></div>
+        <div class="dots__dot"></div>
+        <div class="dots__dot"></div>
+      </div>
+    </div>
+    {{>cards items=arrivals.items imagesPath=arrivals.imagesPath}}
+  </div>
+</section>

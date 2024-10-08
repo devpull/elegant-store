@@ -1,0 +1,56 @@
+:root {
+
+  --layout-width: 1120px;
+  --layout-padding: 32px;
+
+  --font-main: "Inter", sans-serif;
+  --font-accent: "Poppins", sans-serif;
+  --font-secondary: "Space Grotesk", sans-serif;
+
+  --breakp-lg: 1200px;
+  --breakp-m: 900px;
+  --breakp-s: 600px;
+
+  // Primary, secondary and neutral colors
+  --clr-primary: #000;
+  --clr-white: #fff;
+  --clr-secondary-blue: #377DFF;
+  --clr-secondary-orange: #FFAB00;
+  --clr-secondary-green: #38CB89;
+  --clr-secondary-orange-light: #FFC95C;
+  --clr-neutral-07: #141718;
+  --clr-neutral-04: #6C7275;
+  --clr-neutral-01: #FEFEFE;
+  
+  // Colors by function
+  --clr-text-light: #fff;
+  // Buttons
+  --clr-btn-focus-light: var(--clr-neutral-01);
+  --clr-btn-primary: var(--clr-neutral-07);
+  // Tagline
+  --clr-tagline-back: var(--clr-neutral-07);
+  --clr-buy-link: var(--clr-secondary-orange);
+  // Main nav
+  --clr-main-nav-back: var(--clr-secondary-orange-light);
+  --clr-main-nav-text-dark: var(--clr-neutral-07);
+  --clr-icons-black: var(--clr-neutral-07);
+  --clr-main-nav-badge-back: var(--clr-neutral-07);
+  // Hero
+  --clr-heading-accent: var(--clr-secondary-blue);
+  // Card
+  --clr-card-like-back: var(--clr-white);
+  --clr-card-like-stroke: var(--clr-neutral-04);
+  --clr-card-like-fill: var(--clr-primary);
+  // Badge
+  --clr-badge-back-default: var(--clr-white);
+  --clr-badge-text-dark: var(--clr-neutral-07);
+  --clr-badge-text-light: var(--clr-text-light);
+  --clr-badge-success: var(--clr-secondary-green);
+  // Dots
+  --clr-dots-inactive-back: var(--clr-neutral-04);
+  --clr-dots-active: var(--clr-neutral-07);
+
+
+
+
+}

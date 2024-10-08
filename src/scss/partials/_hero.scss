@@ -1,0 +1,39 @@
+.hero {
+  background-image: image-set(
+    url("../img/hero/bg.webp") type("image/webp") 1x,
+    url("../img/hero/bg@2x.webp") type("image/webp") 2x,
+    url("../img/hero/bg.jpg") type("image/jpeg") 1x,
+    url("../img/hero/bg@2x.jpg") type("image/jpeg") 2x
+    );
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &__container {
+    min-height: 820px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    margin-left: 50%;
+    // min-height: 100vh;
+  }
+
+  &__heading {
+    font-family: var(--font-accent);
+    font-weight: 500;
+    font-size: rem(80);
+    line-height: lh(84, 80);
+    
+    &--accent {
+      color: var(--clr-heading-accent);
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: lh(32, 20);
+    margin-bottom: rem(28);
+  }
+}

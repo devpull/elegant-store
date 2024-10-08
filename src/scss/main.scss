@@ -1,0 +1,12 @@
+// Functions
+@import "./functions/**/*.scss";
+
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/fonts";
+@import "./base/typography";
+@import "./base/utility";
+
+// Partials
+@import "./partials/**/*.scss";
