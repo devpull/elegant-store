@@ -11,6 +11,7 @@ const swiper = new Swiper(".swiper", {
   simulateTouch: true,
   slideClass: "card",
   slidesPerView: "auto",
+  slidesPerGroup: 4,
   slidesPerGroupAuto: true,
   spaceBetween: 24,
 
