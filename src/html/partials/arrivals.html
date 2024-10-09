@@ -1,13 +1,19 @@
 <section class="arrivals">
-  <div class="container swiper">
-    <div class="arrivals__row">
-      <h4 class="arrivals__header">Новые поступления</h4>
-      <div class="dots">
-        <div class="dots__dot dots__dot--active"></div>
-        <div class="dots__dot"></div>
-        <div class="dots__dot"></div>
+  <div class="container">
+    <div class="swiper">
+      <div class="arrivals__row">
+        <h4 class="arrivals__header">Новые поступления</h4>
+        <div class="dots">
+          <span class="dots__dot dots__dot--active"></span>
+          <span class="dots__dot"></span>
+          <span class="dots__dot"></span>
+        </div>
       </div>
+      <div class="cards swiper-wrapper">
+        {{>card items=arrivals.items imagesPath=arrivals.imagesPath swiper=true}}
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    {{>cards items=arrivals.items imagesPath=arrivals.imagesPath}}
   </div>
 </section>

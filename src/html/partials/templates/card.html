@@ -1,0 +1,63 @@
+{{#each items}}
+<div class="card">
+  <div class="card__image-wrap">
+    <a href="#!">
+      <div class="card__badges">
+        <span class="badge">NEW</span><br />
+        <span class="badge badge--success">-50%</span>
+      </div>
+      <div class="card__controls">
+        <div class="card__row">
+          <button class="card__like">
+            {{#if favourite}}
+            <svg class="svg-icons--fav-full-dims">
+              <use
+                xlink:href="./img/svg/symbol.sprite.svg#icons--fav-full"
+              ></use>
+            </svg>
+            {{else}}
+            <svg class="svg-icons--fav-dims">
+              <use xlink:href="./img/svg/symbol.sprite.svg#icons--fav"></use>
+            </svg>
+            {{/if}}
+          </button>
+        </div>
+        <button class="btn btn--to-cart">В корзину</button>
+      </div>
+      <div class="card__image">
+        <picture>
+          <source
+            srcset="
+              {{root}}{{../imagesPath}}{{image}}.webp    1x,
+              {{root}}{{../imagesPath}}{{image}}@2x.webp 2x
+            "
+          />
+          <img
+            src="{{root}}{{../imagesPath}}{{image}}.jpg"
+            srcset="{{root}}{{../imagesPath}}{{image}}@2x.jpg 2x"
+            alt="image {{image}}"
+            {{#if ../swiper}}loading="lazy"{{/if}}
+          />
+        </picture>
+        {{#if ../swiper}}<div class="swiper-lazy-preloader"></div>{{/if}}
+      </div>
+    </a>
+  </div>
+  <div class="card__desc">
+    <div class="card__rating">
+      {{#repeat rating}}
+      <svg class="svg-icons--star-dims">
+        <use xlink:href="./img/svg/symbol.sprite.svg#icons--star"></use>
+      </svg>
+      {{/repeat}}
+    </div>
+    <div class="card__title">
+      <a href="#!" title="{{title}}">{{title}}</a>
+    </div>
+    <div class="card__brand">{{shortName}}</div>
+    <div class="card__price">
+      {{price}}&nbsp;<span class="currency"><span class="ruble">₽</span></span>
+    </div>
+  </div>
+</div>
+{{/each}}

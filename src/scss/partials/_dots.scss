@@ -2,13 +2,21 @@
   display: flex;
   column-gap: rem(12);
 
+  &--clickable {
+    .dots__dot {
+      cursor: pointer;
+    }
+  }
+
   &__dot {
-    width: rem(16);
-    height: rem(16);
+    width: rem(14);
+    height: rem(14);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid transparent;
+    transition: all 0.05s ease-in;
 
     &::before {
       display: block;
@@ -20,6 +28,8 @@
     }
 
     &--active {
+      height: rem(14);
+      width: rem(14);
       border: 1px solid var(--clr-dots-active);
       &::before {
         background-color: var(--clr-dots-active);
