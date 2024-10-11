@@ -3,8 +3,11 @@
   <div class="card__image-wrap">
     <a href="#!">
       <div class="card__badges">
-        <span class="badge">NEW</span><br />
-        <span class="badge badge--success">-50%</span>
+        {{#if badges}}
+          {{#each badges}}
+            <span class="badge{{#if class}} {{class}}{{/if}}">{{text}}</span><br />
+          {{/each}}
+        {{/if}}
       </div>
       <div class="card__controls">
         <div class="card__row">
