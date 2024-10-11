@@ -5,3 +5,11 @@ h4 {
   line-height: lh(44, 40);
   letter-spacing: -0.4px;
 }
+
+h5 {
+  font-family: var(--font-accent);
+  font-weight: 500;
+  font-size: rem(34);
+  line-height: lh(38, 34);
+  letter-spacing: -0.6px;
+}
