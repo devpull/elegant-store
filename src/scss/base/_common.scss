@@ -5,3 +5,14 @@
     padding-left: var(--layout-padding);
   }
 }
+
+.container {
+  max-width: var(--layout-width);
+  padding: 0 var(--layout-padding);
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
