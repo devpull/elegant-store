@@ -1,0 +1,45 @@
+.collection {
+  &__sets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(24);
+  }
+
+  &__header {
+    margin: rem(48) 0;
+  }
+}
+
+.collection-set {
+  &__header {
+    margin-top: 0;
+    margin-bottom: rem(12);
+  }
+
+  &__plate {
+    position: relative;
+    background-color: var(--clr-plate-back);
+
+    &--tall {
+      grid-row: span 2;
+    }
+  }
+
+  &__content {
+    position: absolute;
+
+    &--plate {
+      left: rem(32);
+      bottom: rem(32);
+      right: rem(32);
+    }
+  
+    &--tall {
+      left: rem(48);
+      bottom: rem(48);
+      right: rem(48);
+    }
+  }
+
+  
+}
