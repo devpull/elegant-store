@@ -32,3 +32,27 @@
     width: 100%;
   }
 }
+
+.btn-txt {
+  color: var(--clr-neutral-07);
+  all: unset;
+  cursor: pointer;
+  border-bottom: 1px solid var(--clr-neutral-07);
+
+  &--s {
+    font-size: rem(16);
+    line-height: lh(28, 16);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+  }
+
+  &--with-icon {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+
+    .svg-icons--arrow-right-dims {
+      stroke: var(--clr-neutral-07);
+    }
+  }
+}
