@@ -2,12 +2,8 @@
   padding-bottom: rem(100);
   
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    column-gap: rem(24);
-    row-gap: rem(48);
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(262), 1fr));
+    gap: rem(48) rem(24);
   }
 }
