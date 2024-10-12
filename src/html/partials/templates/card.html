@@ -2,13 +2,13 @@
 <div class="card">
   <div class="card__image-wrap">
     <a href="#!">
+      {{#if badges}}
       <div class="card__badges">
-        {{#if badges}}
-          {{#each badges}}
-            <span class="badge{{#if class}} {{class}}{{/if}}">{{text}}</span><br />
-          {{/each}}
-        {{/if}}
+        {{#each badges}}
+        <span class="badge{{#if class}} {{class}}{{/if}}">{{text}}</span><br />
+        {{/each}}
       </div>
+      {{/if}}
       <div class="card__controls">
         <div class="card__row">
           <button class="card__like">
@@ -35,14 +35,13 @@
               {{root}}{{../imagesPath}}{{image}}@2x.webp 2x
             "
           />
-          <img
-            src="{{root}}{{../imagesPath}}{{image}}.jpg"
-            srcset="{{root}}{{../imagesPath}}{{image}}@2x.jpg 2x"
-            alt="image {{image}}"
-            {{#if ../swiper}}loading="lazy"{{/if}}
-          />
+          <img src="{{root}}{{../imagesPath}}{{image}}.jpg"
+          srcset="{{root}}{{../imagesPath}}{{image}}@2x.jpg 2x" alt="image
+          {{image}}" {{#if ../swiper}}loading="lazy"{{/if}} />
         </picture>
-        {{#if ../swiper}}<div class="swiper-lazy-preloader"></div>{{/if}}
+        {{#if ../swiper}}
+        <div class="swiper-lazy-preloader"></div>
+        {{/if}}
       </div>
     </a>
   </div>
