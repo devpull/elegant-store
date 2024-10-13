@@ -22,10 +22,17 @@
   }
 
   &--m {
-    font-size: rem(18);
     padding: em(12, 18) em(56, 18);
+    font-size: rem(18);
     font-weight: 500;
     line-height: lh(32, 18);
+  }
+
+  &--s {
+    padding: em(6) em(40);
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: lh(28, 16);
   }
 
   &--to-cart {
