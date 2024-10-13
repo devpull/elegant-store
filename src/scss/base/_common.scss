@@ -1,5 +1,5 @@
 .container-right {
-  padding-left: calc((100% - var(--layout-width))/2);
+  padding-left: calc((100% - var(--layout-width))/2 + var(--layout-padding));
 
   @media (max-width: 1200px) {
     padding-left: var(--layout-padding);
