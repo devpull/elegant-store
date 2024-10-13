@@ -1,5 +1,5 @@
 .card {
-  min-width: rem(262);
+  min-width: var(--card-min-width);
   display: grid;
   gap: rem(12);
   user-select: none;
@@ -76,6 +76,9 @@
   }
 
   &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     a {
       font-weight: 600;
       font-size: 1rem;
