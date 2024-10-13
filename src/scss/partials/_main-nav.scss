@@ -47,6 +47,7 @@
     line-height: lh(24, 14);
     color: var(--clr-main-nav-text-dark);
     text-decoration: none;
+    white-space: nowrap;
   }
 
   &__user-links {
