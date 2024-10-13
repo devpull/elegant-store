@@ -1,2 +1,3 @@
 import "./modules/tagline";
-import "./swiper"
+import "./swiper";
+import "./counter";
