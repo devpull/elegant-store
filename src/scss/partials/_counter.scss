@@ -66,6 +66,8 @@
   }
 
   &__num {
+    width: rem(40);
+    height: rem(40);
     font-family: var(--font-accent);
     font-size: rem(34);
     line-height: lh(38, 34);
@@ -77,8 +79,8 @@
 
   &__number-back {
     background-color: var(--clr-neutral-01);
-    width: rem(60);
-    height: rem(60);
+    width: rem(40);
+    height: rem(40);
     padding: rem(11);
   }
 
