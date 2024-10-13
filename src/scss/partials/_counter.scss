@@ -1,10 +1,29 @@
 .counter {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
 
   &__image {
     background-color: var(--clr-counter-back);
-    text-align: right;
+    // text-align: right;
+    // img {
+    //   object-fit: cover;
+    //   height: rem(532);
+    // }
+
+    min-height: rem(532);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: image-set(url("../img/promotion/bg.webp") type("image/webp") 1x,
+        url("../img/promotion/bg@2x.webp") type("image/webp") 2x,
+        url("../img/promotion/bg.jpg") 1x,
+        url("../img/promotion/bg@2x.jpg") 2x,
+      );
+
+    @media (max-width: 1440px) {
+      background-size: cover;
+    }
+
   }
 
   &__header {
@@ -73,9 +92,9 @@
 
   &__content {
     max-width: rem(720);
-    margin-left: rem(72);
-    margin-right: rem(160);
-    margin-top: rem(101);
+    padding-left: rem(72);
+    padding-right: rem(160);
+    padding-top: rem(101);
 
     display: grid;
     row-gap: rem(24);
@@ -83,12 +102,16 @@
     &-back {
       background-color: rgba(255, 171, 0, .4);
     }
+
+    @media (max-width: 900px) {
+      padding-bottom: rem(32);
+    }
   }
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
 
-    & > .counter__image {
+    &>.counter__image {
       grid-row: 2;
     }
   }
