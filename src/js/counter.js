@@ -14,17 +14,29 @@ export function tick() {
   const tickId = setInterval(() => {
     const objExpires = count2Obj(futDate);
 
-    if(expired(objExpires)) {
+    if (expired(objExpires)) {
       clearInterval(tickId);
       counter2defaults();
       return;
     }
 
-    days.innerHTML = objExpires.daysLeft;
-    hours.innerHTML = objExpires.hoursLeft;
-    minutes.innerHTML = objExpires.minutesLeft;
-    seconds.innerHTML = objExpires.secondsLeft;
+    updateExpires(objExpires);
   }, 1000);
+}
+
+function updateExpires(objExpires) {
+  if(days.innerHTML !== objExpires.daysLeft.toString()) {
+    days.innerHTML = objExpires.daysLeft;
+  }
+  if(hours.innerHTML !== objExpires.hoursLeft.toString()) {
+    hours.innerHTML = objExpires.hoursLeft;
+  }
+  if(minutes.innerHTML !== objExpires.minutesLeft.toString()) {
+    minutes.innerHTML = objExpires.minutesLeft;
+  }
+  if(seconds.innerHTML !== objExpires.secondsLeft.toString()) {
+    seconds.innerHTML = objExpires.secondsLeft;
+  }
 }
 
 function counter2defaults() {
@@ -36,9 +48,11 @@ function counter2defaults() {
 
 function expired(objExpires) {
   let arrVals = Object.values(objExpires);
-  let sum = arrVals.reduce((accumulator, currentVal) => accumulator + currentVal);
+  let sum = arrVals.reduce(
+    (accumulator, currentVal) => accumulator + currentVal
+  );
 
-  if(sum < 0) {
+  if (sum < 0) {
     return true;
   }
 
@@ -64,7 +78,9 @@ function count2Obj(futDate) {
   );
   countObj.secondsLeft = prependZero(Math.floor((msLeft % (1000 * 60)) / 1000));
 
-  console.log(`${countObj.daysLeft}:${countObj.hoursLeft}:${countObj.minutesLeft}:${countObj.secondsLeft}`);
+  console.log(
+    `${countObj.daysLeft}:${countObj.hoursLeft}:${countObj.minutesLeft}:${countObj.secondsLeft}`
+  );
 
   return countObj;
 }
