@@ -1,3 +1,4 @@
 import "./modules/tagline";
 import "./swiper";
-import "./counter";
+import { tick } from "./counter";
+tick();
