@@ -6,15 +6,17 @@ const seconds = dateDiv.querySelector("#counter-seconds");
 
 // Parsing date from data attribute
 const dateStr = dateDiv.dataset.expires;
-const futDate = parseDate(dateStr);
+const futDate = parseDate(dateStr).getTime();
+let msLeft = futDate - Date.now();
 
 // days, hours, minutes, seconds to object
 
 function tick() {
   const tickId = setInterval(() => {
-    const objExpires = count2Obj(futDate);
+    const objExpires = count2Obj();
+    msLeft -= (1000);
 
-    if (expired(objExpires)) {
+    if (counterExpired()) {
       clearInterval(tickId);
       counter2defaults();
       return;
@@ -46,27 +48,22 @@ function counter2defaults() {
   seconds.innerText = "00";
 }
 
-function expired(objExpires) {
-  let arrVals = Object.values(objExpires);
-  let sum = arrVals.reduce(
-    (accumulator, currentVal) => accumulator + currentVal
-  );
-
-  if (sum < 0) {
+function counterExpired() {
+  if (msLeft <= 0) {
     return true;
   }
 
   return false;
 }
 
-function count2Obj(futDate) {
+function count2Obj() {
   let countObj = {
     daysLeft: 0,
     hoursLeft: 0,
     minutesLeft: 0,
     secondsLeft: 0,
   };
-  let msLeft = futDate.getTime() - Date.now();
+
   console.log("msLeft: ", msLeft);
 
   countObj.daysLeft = prependZero(Math.floor(msLeft / (1000 * 60 * 60 * 24)));
@@ -95,6 +92,11 @@ function prependZero(num) {
 
 // Parses date string like - 17.10.2024 10:33
 function parseDate(dateStr) {
+  if(typeof dateStr !== "string" || dateStr.length < 1) {
+    console.error("Date string in data attribute is incorrect. Example: \"17.10.2024 13:28\"");
+    return new Date(Date.now() + 5 * (1000 * 60 * 60 * 24));
+  }
+
   const dateTime = dateStr.split(" ", 2);
   const [date, time] = dateTime;
 
