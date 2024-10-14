@@ -10,7 +10,7 @@ const futDate = parseDate(dateStr);
 
 // days, hours, minutes, seconds to object
 
-export function tick() {
+function tick() {
   const tickId = setInterval(() => {
     const objExpires = count2Obj(futDate);
 
@@ -25,25 +25,25 @@ export function tick() {
 }
 
 function updateExpires(objExpires) {
-  if(days.innerHTML !== objExpires.daysLeft.toString()) {
-    days.innerHTML = objExpires.daysLeft;
+  if (days.innerText !== objExpires.daysLeft.toString()) {
+    days.innerText = objExpires.daysLeft;
   }
-  if(hours.innerHTML !== objExpires.hoursLeft.toString()) {
-    hours.innerHTML = objExpires.hoursLeft;
+  if (hours.innerText !== objExpires.hoursLeft.toString()) {
+    hours.innerText = objExpires.hoursLeft;
   }
-  if(minutes.innerHTML !== objExpires.minutesLeft.toString()) {
-    minutes.innerHTML = objExpires.minutesLeft;
+  if (minutes.innerText !== objExpires.minutesLeft.toString()) {
+    minutes.innerText = objExpires.minutesLeft;
   }
-  if(seconds.innerHTML !== objExpires.secondsLeft.toString()) {
-    seconds.innerHTML = objExpires.secondsLeft;
+  if (seconds.innerText !== objExpires.secondsLeft.toString()) {
+    seconds.innerText = objExpires.secondsLeft;
   }
 }
 
 function counter2defaults() {
-  days.innerHTML = "00";
-  hours.innerHTML = "00";
-  minutes.innerHTML = "00";
-  seconds.innerHTML = "00";
+  days.innerText = "00";
+  hours.innerText = "00";
+  minutes.innerText = "00";
+  seconds.innerText = "00";
 }
 
 function expired(objExpires) {
@@ -140,3 +140,5 @@ function parseDate(dateStr) {
 
   return newDate;
 }
+
+export { tick };
