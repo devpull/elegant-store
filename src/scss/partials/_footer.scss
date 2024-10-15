@@ -10,15 +10,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     &:first-child {
       margin-bottom: rem(50);
+    }
+
+    &--bottom {
+      border-top: 1px solid var(--clr-neutral-04);
+      min-height: rem(56);
     }
   }
 
   &__logo {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__logo-link {
@@ -49,6 +56,8 @@
     margin: 0;
     padding: 0;
     transform: rotate(90deg);
+    border: none;
+    border: 1px solid var(--clr-neutral-04);
   }
 
   &__list {
@@ -56,6 +65,7 @@
     list-style: none;
     display: flex;
     column-gap: rem(40);
+    flex-wrap: wrap;
   }
 
   &__list-link {
