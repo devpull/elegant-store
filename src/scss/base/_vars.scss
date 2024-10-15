@@ -1,7 +1,7 @@
 :root {
 
-  --layout-width: 1120px;
   --layout-padding: 32px;
+  --layout-width: calc(1120px + var(--layout-padding) * 2);
 
   --font-main: "Inter", sans-serif;
   --font-accent: "Poppins", sans-serif;
@@ -58,8 +58,9 @@
   // Counter
   --clr-counter-back: #260100;
   --clr-counter-text: #121212;
-
-
-
-
+  // Values
+  --clr-values-icon-stroke: var(--clr-neutral-07);
+  --clr-values-back: var(--clr-neutral-02);
+  --clr-values-heading: var(--clr-neutral-07);
+  --clr-values-subheading: var(--clr-neutral-04);
 }
