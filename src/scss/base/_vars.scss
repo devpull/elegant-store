@@ -13,6 +13,7 @@
 
   // Primary, secondary and neutral colors
   --clr-primary: #000;
+  --clr-var-black: #121212;
   --clr-white: #fff;
   --clr-secondary-blue: #377DFF;
   --clr-secondary-orange: #FFAB00;
@@ -57,10 +58,16 @@
   --clr-plate-back: var(--clr-neutral-02);
   // Counter
   --clr-counter-back: #260100;
-  --clr-counter-text: #121212;
+  --clr-counter-text: var(--clr-var-black);
   // Values
   --clr-values-icon-stroke: var(--clr-neutral-07);
   --clr-values-back: var(--clr-neutral-02);
   --clr-values-heading: var(--clr-neutral-07);
   --clr-values-subheading: var(--clr-neutral-04);
+  // Newsletter
+  --clr-newsletter-back: #e1e4e4;
+  --clr-newsletter-text: var(--clr-var-black);
+  --clr-newsletter-form-text: var(--clr-neutral-04);
+  --clr-newsletter-mail-icon: var(--clr-var-black);
+  --clr-newsletter-form-underline: #A5A9AA;
 }
