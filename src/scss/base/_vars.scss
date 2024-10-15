@@ -21,6 +21,7 @@
   --clr-secondary-orange-light: #FFC95C;
   --clr-neutral-07: #141718;
   --clr-neutral-04: #6C7275;
+  --clr-neutral-03: #E8ECEF;
   --clr-neutral-02: #F3F5F7;
   --clr-neutral-01: #FEFEFE;
   
@@ -70,4 +71,7 @@
   --clr-newsletter-form-text: var(--clr-neutral-04);
   --clr-newsletter-mail-icon: var(--clr-var-black);
   --clr-newsletter-form-underline: #A5A9AA;
+  // Footer
+  --clr-footer-back: var(--clr-neutral-07);
+  --clr-specific-text: var(--clr-neutral-03);
 }
