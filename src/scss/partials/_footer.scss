@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    column-gap: rem(32);
 
     span {
       color: var(--clr-neutral-04);
