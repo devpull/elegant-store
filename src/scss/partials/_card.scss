@@ -3,25 +3,24 @@
   display: grid;
   gap: rem(12);
   user-select: none;
+  transition: all .1s ease-in;
 
   img {
     object-fit: cover;
     aspect-ratio: 262 / 349;
   }
 
+  &:hover .card__to-cart {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
+
+  &:hover .card__like {
+    opacity: 1;
+  }
 
   &__image-wrap {
     position: relative;
-    transition: all .1s ease-in;
-
-    &:hover > .card__to-cart {
-      opacity: 1;
-      transform: translateY(-1rem);
-    }
-
-    &:hover > .card__like {
-      opacity: 1;
-    }
   }
 
   &__image {
