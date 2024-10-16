@@ -1,32 +1,28 @@
 {{#each items}}
 <div class="card">
   <div class="card__image-wrap">
-    <a href="#!">
-      {{#if badges}}
-      <div class="card__badges">
-        {{#each badges}}
-        <span class="badge{{#if class}} {{class}}{{/if}}">{{text}}</span><br />
-        {{/each}}
-      </div>
+    {{#if badges}}
+    <div class="card__badges">
+      {{#each badges}}
+      <span class="badge{{#if class}} {{class}}{{/if}}">{{text}}</span><br />
+      {{/each}}
+    </div>
+    {{/if}}
+    <button class="card__like">
+      {{#if favourite}}
+      <svg class="svg-icons--fav-full-dims">
+        <use xlink:href="./img/svg/symbol.sprite.svg#icons--fav-full"></use>
+      </svg>
+      {{else}}
+      <svg class="svg-icons--fav-dims">
+        <use xlink:href="./img/svg/symbol.sprite.svg#icons--fav"></use>
+      </svg>
       {{/if}}
-      <div class="card__controls">
-        <div class="card__row">
-          <button class="card__like">
-            {{#if favourite}}
-            <svg class="svg-icons--fav-full-dims">
-              <use
-                xlink:href="./img/svg/symbol.sprite.svg#icons--fav-full"
-              ></use>
-            </svg>
-            {{else}}
-            <svg class="svg-icons--fav-dims">
-              <use xlink:href="./img/svg/symbol.sprite.svg#icons--fav"></use>
-            </svg>
-            {{/if}}
-          </button>
-        </div>
-        <button class="btn btn--to-cart">В корзину</button>
-      </div>
+    </button>
+    <div class="card__to-cart">
+      <button class="btn btn--to-cart">В корзину</button>
+    </div>
+    <a href="#!">
       <div class="card__image">
         <picture>
           <source
@@ -34,6 +30,7 @@
               {{root}}{{../imagesPath}}{{image}}.webp    1x,
               {{root}}{{../imagesPath}}{{image}}@2x.webp 2x
             "
+            type="image/webp"
           />
           <img src="{{root}}{{../imagesPath}}{{image}}.jpg"
           srcset="{{root}}{{../imagesPath}}{{image}}@2x.jpg 2x" alt="image
