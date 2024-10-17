@@ -1,0 +1,31 @@
+@use "sass:map";
+
+@mixin display {
+  $displayList: map.get($display, "values");
+
+  // display
+  @each $disp in $displayList {
+    .d-#{$disp} {
+      display: #{$disp} !important;
+    }
+  }
+
+  // display ... with media
+  @each $size, $bp in $break-points {
+
+    // every breakpoint
+    @media (max-width: #{$bp}px) {
+
+      // every display
+      @each $disp in $displayList {
+        .d-#{$size}-#{$disp} {
+          @if $disp == "none" {
+            display: none !important;
+          } @else {
+            display: #{$disp} !important;
+          }
+        }
+      }
+    }
+  }
+}

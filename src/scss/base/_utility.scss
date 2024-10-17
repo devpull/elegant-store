@@ -1,3 +1,5 @@
-.hidden {
-  display: none !important;
-}
+$display: (
+  values: none inline inline-block block grid inline-grid table table-row table-cell flex inline-flex
+);
+
+@include display;
