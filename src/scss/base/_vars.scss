@@ -1,3 +1,10 @@
+$break-points: (
+  "xxl": 1440,
+  "xl": 1200,
+  "md": 900,
+  "sm": 600,
+);
+
 :root {
 
   --layout-padding: 32px;
@@ -6,10 +13,6 @@
   --font-main: "Inter", sans-serif;
   --font-accent: "Poppins", sans-serif;
   --font-secondary: "Space Grotesk", sans-serif;
-
-  --breakp-lg: 1200px;
-  --breakp-m: 900px;
-  --breakp-s: 600px;
 
   // Primary, secondary and neutral colors
   --clr-primary: #000;
@@ -24,7 +27,7 @@
   --clr-neutral-03: #E8ECEF;
   --clr-neutral-02: #F3F5F7;
   --clr-neutral-01: #FEFEFE;
-  
+
   // Colors by function
   --clr-text-light: #fff;
   // Buttons
