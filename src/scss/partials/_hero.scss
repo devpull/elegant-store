@@ -21,25 +21,30 @@
       margin-left: 0;
       text-align: center;
     }
+    @include media("sm") {
+      padding-top: rem(40);
+    }
   }
 
   &__heading {
     font-family: var(--font-accent);
     font-weight: 500;
-    font-size: rem(80);
-    line-height: lh(84, 80);
+    font-size: rem(100);
+    line-height: lh(84, 100);
+    margin-top: 0;
+    margin-bottom: rem(8);
 
     &--accent {
       color: var(--clr-heading-accent);
     }
 
-    @include media("lg") {
-      font-size: rem(60);
-      line-height: lh(64, 60);
+    @include media("xl") {
+      font-size: rem(80);
+      line-height: lh(84, 80);
     }
     @include media("sm") {
-      font-size: rem(40);
-      line-height: lh(44, 40);
+      font-size: rem(50);
+      line-height: lh(54, 50);
     }
 
   }
@@ -48,11 +53,13 @@
     font-weight: 400;
     font-size: rem(20);
     line-height: lh(32, 20);
+    margin-top: 0;
     margin-bottom: rem(28);
 
     @include media("sm") {
       font-size: rem(16);
       line-height: lh(26, 16);
+      margin-bottom: rem(8);
     }
   }
 
