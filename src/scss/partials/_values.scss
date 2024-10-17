@@ -2,13 +2,10 @@
   padding: rem(40) 0;
   display: flex;
   flex-wrap: wrap;
-  // display: grid;
-  // grid-template-columns: repeat(4, minmax(rem(262), auto));
   gap: rem(24);
 
   @media (max-width: 900px) {
     padding: rem(32) 0;
-    // grid-template-columns: repeat(auto-fit, minmax(rem(152), 1fr));
     gap: rem(8);
   }
 
@@ -19,7 +16,6 @@
 
     @media (max-width: 900px) {
       padding: rem(32) rem(16);
-      // min-width: rem(152);
     }
   }
 
