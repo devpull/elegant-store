@@ -1,10 +1,19 @@
 <nav class="main-nav">
   <div class="container main-nav__row">
-    <div class="main-nav__logo">
-      <a href="#!">3legant</a>
+    <div class="main-nav__col d-flex">
+      <div class="main-nav__hamburger d-none d-md-block">
+        <svg class="svg-icons--menu-dims">
+          <use
+            xlink:href="{{root}}/img/svg/symbol.sprite.svg#icons--menu"
+          ></use>
+        </svg>
+      </div>
+      <div class="main-nav__logo">
+        <a href="#!">3legant.</a>
+      </div>
     </div>
 
-    <ul class="main-nav__list">
+    <ul class="main-nav__list d-md-none">
       <li class="main-nav__list-item">
         <a class="main-nav__list-link" href="#!">Главная</a>
       </li>
@@ -20,14 +29,14 @@
     </ul>
 
     <ul class="main-nav__user-links">
-      <li class="main-nav__user-links-item">
+      <li class="main-nav__user-links-item d-sm-none">
         <button class="main-nav__user-search-button">
           <svg class="svg-icons--search-dims">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--search"></use>
           </svg>
         </button>
       </li>
-      <li class="main-nav__user-links-item">
+      <li class="main-nav__user-links-item d-sm-none">
         <button class="main-nav__user-cabinet-button">
           <svg class="svg-icons--user-dims">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--user"></use>

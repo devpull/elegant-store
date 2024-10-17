@@ -19,6 +19,12 @@
     }
   }
 
+  &__hamburger {
+    height: rem(24);
+    stroke: black;
+    margin-right: rem(4);
+  }
+
   &__list {
     margin: 0;
     display: flex;
