@@ -4,12 +4,6 @@
 
   &__image {
     background-color: var(--clr-counter-back);
-    // text-align: right;
-    // img {
-    //   object-fit: cover;
-    //   height: rem(532);
-    // }
-
     min-height: rem(532);
     background-position: center right;
     background-repeat: no-repeat;
@@ -20,7 +14,7 @@
         url("../img/promotion/bg@2x.jpg") 2x,
       );
 
-    @media (max-width: 1440px) {
+    @include media("xxl") {
       background-size: cover;
     }
 
@@ -105,12 +99,21 @@
       background-color: rgba(255, 171, 0, .4);
     }
 
-    @media (max-width: 900px) {
+    @include media("md") {
       padding-bottom: rem(32);
+    }
+    @include media("sm") {
+      padding: rem(32);
     }
   }
 
-  @media (max-width: 900px) {
+  &__button {
+    .btn--s {
+      width: 100%;
+    }
+  }
+
+  @include media("md") {
     grid-template-columns: 1fr;
 
     &>.counter__image {
