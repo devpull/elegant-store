@@ -37,6 +37,12 @@
 
   &--to-cart {
     width: 100%;
+    @include media("sm") {
+      padding: em(6, 12) em(20, 12);
+      font-size: rem(12);
+      font-weight: 500;
+      line-height: lh(28, 12);
+    }
   }
 }
 
