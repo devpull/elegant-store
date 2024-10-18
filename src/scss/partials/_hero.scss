@@ -7,22 +7,25 @@
   background-repeat: no-repeat;
 
   &__container {
-    min-height: 820px;
+    padding-top: rem(50);
+    padding-bottom: rem(50);
     display: flex;
     align-items: center;
+    min-height: rem(500);
     @include media("sm") {
+      padding-top: 0;
+      padding-bottom: 0;
       align-items: flex-start;
+      min-height: rem(700);
     }
   }
 
   &__content {
     margin-left: 50%;
-    @include media("md") {
-      margin-left: 0;
-      text-align: center;
-    }
     @include media("sm") {
       padding-top: rem(40);
+      margin-left: 0;
+      text-align: center;
     }
   }
 
@@ -55,6 +58,7 @@
     line-height: lh(32, 20);
     margin-top: 0;
     margin-bottom: rem(28);
+    text-wrap: balance;
 
     @include media("sm") {
       font-size: rem(16);
