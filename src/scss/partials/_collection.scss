@@ -3,17 +3,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(24);
+
+    @include media("sm") {
+      grid-template-columns: 1fr;
+    }
   }
 
-  &__header {
+  &__heading {
     margin: rem(48) 0;
   }
 }
 
 .collection-set {
-  &__header {
+  &__heading {
     margin-top: 0;
     margin-bottom: rem(12);
+
+    @include media("md") {
+      font-size: rem(24);
+      line-height: rem(34, 24);
+      font-weight: 500;
+      letter-spacing: -0.6px;
+    }
   }
 
   &__plate {
@@ -25,6 +36,10 @@
     }
   }
 
+  &__image {
+    text-align: center;
+  }
+
   &__content {
     position: absolute;
 
@@ -32,12 +47,24 @@
       left: rem(32);
       bottom: rem(32);
       right: rem(32);
+
+      @include media("md") {
+        left: rem(20);
+        bottom: rem(20);
+        right: rem(20);
+      }
     }
   
     &--tall {
       left: rem(48);
       bottom: rem(48);
       right: rem(48);
+
+      @include media("md") {
+        left: rem(20);
+        bottom: rem(20);
+        right: rem(20);
+      }
     }
   }
 
