@@ -45,6 +45,7 @@ $break-points: (
   --clr-heading-accent: var(--clr-secondary-blue);
   // Card
   --card-min-width: #{rem(262)};
+  --card-mini-width: #{rem(140)};
   --clr-card-image-back: var(--clr-neutral-02);
   --clr-card-like-back: var(--clr-white);
   --clr-card-like-stroke: var(--clr-neutral-04);
