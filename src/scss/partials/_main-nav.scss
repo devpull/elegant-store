@@ -23,6 +23,19 @@
     height: rem(24);
     stroke: black;
     margin-right: rem(4);
+
+    &-btn {
+      all: unset;
+      display: revert;
+      border-radius: 50%;
+      height: rem(24);
+      width: rem(24);
+      transition: background-color .1s ease-in;
+
+      &:active {
+        background-color: #b89347;
+      }
+    }
   }
 
   &__list {
@@ -90,9 +103,8 @@
     background-color: var(--clr-main-nav-badge-back);
     padding: .5em;
     border-radius: 50%;
-    min-width: 1em;
-    min-height: 1em;
-    // line-height: 1em;
+    min-width: rem(24);
+    min-height: rem(24);
   }
 
   &__user-cabinet-button, &__user-cart-button, &__user-search-button {
