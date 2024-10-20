@@ -1,15 +1,35 @@
 .arrivals {
   padding: rem(48) 0;
 
+  @include media("sm") {
+    padding: rem(32) 0;
+  }
+
   &__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: rem(48);
+
+    @include media("sm") {
+      margin-bottom: rem(40);
+    }
   }
 
   &__header {
     margin-top: 0;
     margin-bottom: 0;
+
+    @include media("sm") {
+      font-size: rem(34);
+      line-height: lh(38, 34);
+      font-weight: 500;
+    }
+  }
+
+  .card {
+    @include media("sm") {
+      min-width: rem(231);
+    }
   }
 }
