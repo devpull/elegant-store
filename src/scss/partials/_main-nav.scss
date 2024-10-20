@@ -17,11 +17,17 @@
       color: var(--clr-main-nav-text-dark);
       text-decoration: none;
     }
+
+    @include media("sm") {
+      font-size: rem(16);
+      line-height: lh(24, 16);
+      font-weight: 500;
+    }
   }
 
   &__hamburger {
     height: rem(24);
-    stroke: black;
+    stroke: var(--clr-primary);
     margin-right: rem(4);
 
     &-btn {
@@ -33,7 +39,7 @@
       transition: background-color .1s ease-in;
 
       &:active {
-        background-color: #b89347;
+        background-color: var(--clr-main-nav-hamburger-active);
       }
     }
   }
