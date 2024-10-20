@@ -28,6 +28,12 @@
 
   &__text {
     text-wrap: pretty;
+
+    &-link {
+      color: var(--clr-text-light);
+      text-decoration: none;
+    }
+
     @include media("sm") {
       font-size: rem(12);
     }
@@ -48,13 +54,20 @@
     display: revert;
     cursor: pointer;
     height: rem(24);
+
+    .svg-icons--close-dims {
+      stroke: #343839;
+
+      @include media("sm") {
+        stroke: var(--clr-white);
+      }
+    }
+
+
   }
 
   .svg-icons--arrow-right-dims {
     stroke: var(--clr-buy-link);
   }
 
-  .svg-icons--close-dims {
-    stroke: #343839;
-  }
 }
