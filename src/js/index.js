@@ -1,4 +1,4 @@
 import "./modules/tagline";
-import "./swiper";
-import { tick } from "./counter";
+import "./modules/swiper";
+import { tick } from "./modules/counter";
 tick();

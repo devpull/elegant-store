@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +12,7 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   // slidesPerGroup: 4,
   slidesPerGroupAuto: true,
-  spaceBetween: 24,
+  spaceBetween: 12,
 
   pagination: {
     el: ".dots",
@@ -22,4 +22,10 @@ const swiper = new Swiper(".swiper", {
     clickableClass: "dots--clickable",
     clickable: true,
   },
+
+  breakpoints: {
+    900: {
+      spaceBetween: 24
+    }
+  }
 });
