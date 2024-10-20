@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     min-height: rem(500);
+
     @include media("sm") {
       padding-top: 0;
       padding-bottom: 0;
@@ -22,6 +23,7 @@
 
   &__content {
     margin-left: 50%;
+
     @include media("sm") {
       padding-top: rem(40);
       margin-left: 0;
@@ -34,6 +36,7 @@
     font-weight: 500;
     font-size: rem(100);
     line-height: lh(84, 100);
+    letter-spacing: -4px;
     margin-top: 0;
     margin-bottom: rem(8);
 
@@ -44,10 +47,13 @@
     @include media("xl") {
       font-size: rem(80);
       line-height: lh(84, 80);
+      letter-spacing: -2px;
     }
+
     @include media("sm") {
       font-size: rem(50);
       line-height: lh(54, 50);
+      letter-spacing: -0.4px;
     }
 
   }
@@ -58,12 +64,18 @@
     line-height: lh(32, 20);
     margin-top: 0;
     margin-bottom: rem(28);
-    text-wrap: balance;
 
     @include media("sm") {
       font-size: rem(16);
       line-height: lh(26, 16);
       margin-bottom: rem(8);
+    }
+  }
+
+  &__cta {
+    @include media("sm") {
+      font-size: rem(14);
+      line-height: lh(24, 14);
     }
   }
 
