@@ -19,6 +19,9 @@
       background-size: cover;
     }
 
+    @include media("sm") {
+      background-position: center;
+    }
   }
 
   &__header {
