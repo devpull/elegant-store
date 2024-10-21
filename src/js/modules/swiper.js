@@ -16,16 +16,21 @@ const swiper = new Swiper(".swiper", {
 
   pagination: {
     el: ".dots",
-    horizontalClass: "dots--horizontal",
-    bulletClass: "dots__dot",
-    bulletActiveClass: "dots__dot--active",
-    clickableClass: "dots--clickable",
+    // horizontalClass: "dots--horizontal",
+    // bulletClass: "dots__dot",
+    // bulletActiveClass: "dots__dot--active",
+    // clickableClass: "dots--clickable",
     clickable: true,
+    dynamicBullets: true,
   },
 
   breakpoints: {
+    320: {
+      spaceBetween: 12,
+      // centeredSlides: true,
+    },
     900: {
-      spaceBetween: 24
-    }
-  }
+      spaceBetween: 24,
+    },
+  },
 });
