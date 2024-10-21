@@ -1,6 +1,6 @@
 .dots {
-  display: flex;
-  column-gap: rem(12);
+  // display: flex;
+  // column-gap: rem(12);
 
   &--clickable {
     .dots__dot {
@@ -12,10 +12,10 @@
     width: rem(14);
     height: rem(14);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid transparent;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border: 1px solid transparent;
     transition: all 0.05s ease-in;
 
     &::before {
