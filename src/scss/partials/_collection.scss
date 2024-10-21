@@ -1,4 +1,10 @@
 .collection {
+  padding-bottom: rem(40);
+
+  @include media("sm") {
+    padding-top: rem(40);
+  }
+
   &__sets {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -11,6 +17,16 @@
 
   &__heading {
     margin: rem(48) 0;
+
+    @include media("sm") {
+      text-align: center;
+      font-size: rem(34);
+      letter-spacing: -0.6px;
+      font-weight: 500;
+      line-height: lh(38, 34);
+      margin-top: 0;
+      margin-bottom: rem(16);
+    }
   }
 }
 
@@ -54,7 +70,7 @@
         right: rem(20);
       }
     }
-  
+
     &--tall {
       left: rem(48);
       bottom: rem(48);
@@ -68,5 +84,5 @@
     }
   }
 
-  
+
 }

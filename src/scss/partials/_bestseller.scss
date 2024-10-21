@@ -1,6 +1,14 @@
 .bestseller {
   padding-bottom: rem(100);
   
+  &__heading {
+    @include media("sm") {
+      margin-top: 0;
+      margin-bottom: rem(16);
+      text-align: center;
+    }
+  }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
@@ -16,6 +24,7 @@
   }
 
   @include media("sm") {
+    padding-top: rem(40);
     padding-bottom: rem(40);
   }
 }
