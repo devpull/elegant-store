@@ -9,13 +9,18 @@
   }
 
   &__back {
-    background-image: image-set(url("../img/newsletter/bg.webp") type("image/webp") 1x,
-        url("../img/newsletter/bg@2x.webp") type("image/webp") 2x,
-        url("../img/newsletter/bg.jpg") type("image/jpeg") 1x,
-        url("../img/newsletter/bg@2x.jpg") type("image/jpeg") 2x);
+    background-image: url("../img/newsletter/bg.jpg");
+    background-image: image-set(url("../img/newsletter/bg.webp") 1x,
+        url("../img/newsletter/bg@2x.webp") 2x,
+        url("../img/newsletter/bg.jpg") 1x,
+        url("../img/newsletter/bg@2x.jpg") 2x);
     background-repeat: no-repeat;
     background-position: top center;
     min-height: rem(360);
+
+    @include media("sm") {
+      background-image: none;
+    }
   }
 
   &__heading {
