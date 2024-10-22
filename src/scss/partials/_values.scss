@@ -1,10 +1,10 @@
 .values {
-  padding: rem(40) 0;
   display: flex;
+  padding: rem(40) 0;
   flex-wrap: wrap;
   gap: rem(24);
 
-  @media (max-width: 900px) {
+  @include media("md") {
     padding: rem(32) 0;
     gap: rem(8);
   }
@@ -14,7 +14,8 @@
     padding: rem(48) rem(32); 
     background-color: var(--clr-values-back);
 
-    @media (max-width: 900px) {
+    @include media("sm") {
+      flex: 1 rem(150);
       padding: rem(32) rem(16);
     }
   }
@@ -27,9 +28,16 @@
     color: var(--clr-values-heading);
     margin-top: 0;
     margin-bottom: rem(8);
+
+    @include media("sm") {
+      font-family: var(--font-main);
+      font-size: rem(14);
+      line-height: lh(22, 14);
+      font-weight: 600;
+    }
   }
 
-  &__subheading {
+  &__text {
     font-family: var(--font-accent);
     font-weight: 400;
     font-size: rem(14);
@@ -37,6 +45,11 @@
     color: var(--clr-values-subheading);
     margin-top: 0;
     margin-bottom: 0;
+
+    @include media("sm") {
+      font-family: var(--font-accent);
+      line-height: lh(22, 14);
+    }
   }
 
   &__icon {
