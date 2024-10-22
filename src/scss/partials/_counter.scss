@@ -106,6 +106,7 @@
     @include media("md") {
       padding-bottom: rem(32);
     }
+
     @include media("sm") {
       padding: rem(32);
     }
@@ -113,7 +114,11 @@
 
   &__button {
     .btn--s {
-      width: 100%;
+      @include media("sm") {
+        width: 100%;
+        font-size: rem(14);
+        line-height: lh(24, 14);
+      }
     }
   }
 
