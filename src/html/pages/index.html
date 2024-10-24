@@ -1,14 +1,20 @@
 ---
 title: Магазин 3legant
 ---
-{{>tagline}}
-{{>main-nav}}
-<!-- {{> hero}} -->
-{{>arrivals}}
-{{>collection}}
-{{>bestseller}}
-{{>counter}}
-{{>values}}
-{{>newsletter}}
+<header>
+  {{>tagline}}
+  {{>main-nav}}
+  {{>hero}}
+</header>
+<main>
+  <article>
+    {{>arrivals}}
+    {{>collection}}
+    {{>bestseller}}
+    {{>counter}}
+    {{>values}}
+    {{>newsletter}}
+  </article>
+</main>
 {{>footer}}
 <script src="{{root}}js/index.bundle.js"></script>

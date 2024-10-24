@@ -76,6 +76,20 @@
     white-space: nowrap;
   }
 
+  &__list-button {
+    all: unset;
+    display: revert;
+    cursor: revert;
+    height: rem(24);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: lh(24, 14);
+    color: var(--clr-main-nav-text-dark);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
   &__user-links {
     margin: 0;
     display: flex;
@@ -110,11 +124,13 @@
     background-color: var(--clr-main-nav-badge-back);
     padding: .5em;
     border-radius: 50%;
-    min-width: rem(24);
-    min-height: rem(24);
+    min-width: em(24, 12);
+    min-height: em(24, 12);
   }
 
-  &__user-cabinet-button, &__user-cart-button, &__user-search-button {
+  &__user-button {
+    all: unset;
+    display: revert;
     cursor: pointer;
     max-height: rem(24);
   }

@@ -1,8 +1,8 @@
-<nav class="main-nav">
+<nav class="main-nav" aria-label="Главная навигация" role="navigation">
   <div class="container main-nav__row">
     <div class="main-nav__col d-flex">
       <div class="main-nav__hamburger d-none d-md-block">
-        <button class="main-nav__hamburger-btn">
+        <button class="main-nav__hamburger-btn" aria-label="Основное меню.">
           <svg class="svg-icons--menu-dims">
             <use
               xlink:href="{{root}}/img/svg/symbol.sprite.svg#icons--menu"
@@ -20,10 +20,10 @@
         <a class="main-nav__list-link" href="#!">Главная</a>
       </li>
       <li class="main-nav__list-item main-nav__list-item--has-children">
-        <a class="main-nav__list-link" href="#!">Магазин</a>
+        <button class="main-nav__list-button" aria-label="Магазин">Магазин</button>
       </li>
       <li class="main-nav__list-item main-nav__list-item--has-children">
-        <a class="main-nav__list-link" href="#!">Продукт</a>
+        <button class="main-nav__list-button" aria-label="Продукт">Продукт</button>
       </li>
       <li class="main-nav__list-item">
         <a class="main-nav__list-link" href="#!">Контакты</a>
@@ -32,21 +32,21 @@
 
     <ul class="main-nav__user-links">
       <li class="main-nav__user-links-item d-md-none">
-        <button class="main-nav__user-search-button">
+        <button class="main-nav__user-button" aria-label="Поиск">
           <svg class="svg-icons--search-dims">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--search"></use>
           </svg>
         </button>
       </li>
       <li class="main-nav__user-links-item d-md-none">
-        <button class="main-nav__user-cabinet-button">
+        <button class="main-nav__user-button" aria-label="Личный кабинет">
           <svg class="svg-icons--user-dims">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--user"></use>
           </svg>
         </button>
       </li>
       <li class="main-nav__user-links-item main-nav__user-cart">
-        <button class="main-nav__user-cart-button">
+        <button class="main-nav__user-button" aria-label="Корзина">
           <svg class="svg-icons--cart-dims">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--cart"></use>
           </svg>
