@@ -2,6 +2,12 @@
   padding-bottom: rem(100);
   
   &__heading {
+    font-family: var(--font-accent);
+    font-weight: 500;
+    font-size: rem(40);
+    line-height: lh(44, 40);
+    letter-spacing: -0.4px;
+
     @include media("sm") {
       margin-top: 0;
       margin-bottom: rem(16);

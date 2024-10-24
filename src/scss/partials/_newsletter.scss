@@ -8,6 +8,11 @@
     padding-top: rem(100);
   }
 
+  &__content {
+    width: 100%;
+    max-width: 55ch;
+  }
+
   &__back {
     background-image: url("../img/newsletter/bg.jpg");
     background-image: image-set(url("../img/newsletter/bg.webp") 1x,
@@ -27,6 +32,12 @@
     margin-top: 0;
     margin-bottom: rem(8);
     color: var(--clr-newsletter-text);
+
+    font-family: var(--font-accent);
+    font-weight: 500;
+    font-size: rem(40);
+    line-height: lh(44, 40);
+    letter-spacing: -0.4px;
   }
 
   &__subheading {

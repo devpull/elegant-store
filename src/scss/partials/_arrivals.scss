@@ -20,10 +20,15 @@
     margin-top: 0;
     margin-bottom: 0;
 
+    font-family: var(--font-accent);
+    font-weight: 500;
+    font-size: rem(40);
+    line-height: lh(44, 40);
+    letter-spacing: -0.4px;
+
     @include media("sm") {
       font-size: rem(34);
       line-height: lh(38, 34);
-      font-weight: 500;
     }
   }
 
