@@ -3,7 +3,7 @@
     <div class="main-nav__col d-flex">
       <div class="main-nav__hamburger d-none d-md-block">
         <button class="main-nav__hamburger-btn" aria-label="Основное меню.">
-          <svg class="svg-icons--menu-dims">
+          <svg class="svg-icons--menu-dims" aria-hidden="true">
             <use
               xlink:href="{{root}}/img/svg/symbol.sprite.svg#icons--menu"
             ></use>
@@ -31,23 +31,23 @@
     </ul>
 
     <ul class="main-nav__user-links">
-      <li class="main-nav__user-links-item d-md-none">
+      <li class="main-nav__user-links-item main-nav__user-search d-md-none">
         <button class="main-nav__user-button" aria-label="Поиск">
-          <svg class="svg-icons--search-dims">
+          <svg class="svg-icons--search-dims" aria-hidden="true">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--search"></use>
           </svg>
         </button>
       </li>
-      <li class="main-nav__user-links-item d-md-none">
+      <li class="main-nav__user-links-item main-nav__user-cabinet d-md-none">
         <button class="main-nav__user-button" aria-label="Личный кабинет">
-          <svg class="svg-icons--user-dims">
+          <svg class="svg-icons--user-dims" aria-hidden="true">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--user"></use>
           </svg>
         </button>
       </li>
       <li class="main-nav__user-links-item main-nav__user-cart">
         <button class="main-nav__user-button" aria-label="Корзина">
-          <svg class="svg-icons--cart-dims">
+          <svg class="svg-icons--cart-dims" aria-hidden="true">
             <use xlink:href="./img/svg/symbol.sprite.svg#icons--cart"></use>
           </svg>
         </button>
