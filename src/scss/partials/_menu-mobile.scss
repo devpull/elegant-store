@@ -1,0 +1,38 @@
+.menu-mobile {
+
+  &[aria-hidden="true"] {
+  }
+
+  &[aria-hidden="false"] .menu-mobile__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &[aria-hidden="false"] .menu-mobile__container {
+    margin-right: 10vw;
+  }
+
+  &__container {
+    background-color: crimson;
+    min-height: 100%;
+    padding: rem(24); // prevent margin squash
+    background-color: white;
+    margin-right: 30vw;
+
+    transition: margin .1s ease-in;
+  }
+
+  &__overlay {
+    position: fixed;
+    background-color: rgba(128, 128, 128, .9);
+    inset: 0;
+    z-index: 100;
+
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s ease-in;
+  }
+}
