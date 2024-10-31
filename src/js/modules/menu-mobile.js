@@ -2,6 +2,7 @@ let options = {
     menuClass: "menu-mobile",
     menuBtnCloseClass: "menu-mobile__close",
     menuBtnOpenClass: "main-nav__hamburger-btn",
+    menuContainerClass: "menu-mobile__container",
     menuOverlayClass: "menu-mobile__overlay",
     widthLimit: 900,
     hiddenClass: "hidden",
@@ -11,7 +12,8 @@ let options = {
   menu,
   menuBtnOpen,
   menuBtnClose,
-  menuOverlay;
+  menuOverlay,
+  menuContainer;
 
 export function init(opt) {
   options = { ...options, ...opt };
@@ -21,10 +23,15 @@ export function init(opt) {
   menuBtnOpen = document.querySelector("." + options.menuBtnOpenClass);
   menuBtnClose = document.querySelector("." + options.menuBtnCloseClass);
   menuOverlay = document.querySelector("." + options.menuOverlayClass);
+  menuContainer = document.querySelector("." + options.menuContainerClass);
 
   menuBtnOpen.addEventListener("click", toggleMenu);
   menuBtnClose.addEventListener("click", menuClose);
   menuOverlay.addEventListener("click", menuClose);
+  menuContainer.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+  window.addEventListener("resize", operateVisibility);
 }
 
 function operateVisibility() {
@@ -49,7 +56,6 @@ function menuClose() {
 
 function toggleMenu() {
   let isMenuHidden = menu.getAttribute("aria-hidden").toLowerCase() === "true";
-  console.log("isMenuHidden: ", isMenuHidden);
 
   // opening menu only withing certain width range
   if (window.innerWidth <= options.widthLimit && isMenuHidden === true) {
@@ -59,6 +65,6 @@ function toggleMenu() {
   if (isMenuHidden === false) {
     menuClose();
   }
-}
 
-window.addEventListener("resize", operateVisibility);
+  console.log("isMenuHidden: ", isMenuHidden);
+}

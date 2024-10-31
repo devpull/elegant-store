@@ -1,38 +1,52 @@
 .menu-mobile {
 
-  &[aria-hidden="true"] {
+  // Overlay hidden
+  &[aria-hidden="true"] .menu-mobile__overlay {
+    visibility: hidden;
+    opacity: 0;
   }
 
+  &[aria-hidden="true"] .menu-mobile__container {
+    transform: translateX(-100%);
+  }
+  
   &[aria-hidden="false"] .menu-mobile__overlay {
-    visibility: visible;
-    opacity: 1;
   }
 
   &[aria-hidden="false"] .menu-mobile__container {
-    margin-right: 10vw;
+  }
+  
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__close {
+    all: unset;
+    display: revert;
+    width: rem(24);
+    height: rem(24);
+    stroke: var(--clr-menu-mobile-close);
   }
 
   &__container {
-    background-color: crimson;
     min-height: 100%;
     padding: rem(24); // prevent margin squash
     background-color: white;
-    margin-right: 30vw;
+    margin-right: 10vw;
 
-    transition: margin .1s ease-in;
+    transition: all .2s;
   }
 
   &__overlay {
     position: fixed;
     background-color: rgba(128, 128, 128, .9);
     inset: 0;
-    z-index: 100;
+    z-index: 10;
 
     overflow-y: scroll;
     overscroll-behavior: contain;
 
-    opacity: 0;
-    visibility: hidden;
-    transition: all .1s ease-in;
+    transition: all .2s;
   }
 }
