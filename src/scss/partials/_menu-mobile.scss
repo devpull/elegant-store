@@ -10,12 +10,6 @@
     transform: translateX(-100%);
   }
   
-  &[aria-hidden="false"] .menu-mobile__overlay {
-  }
-
-  &[aria-hidden="false"] .menu-mobile__container {
-  }
-  
   &__row {
     display: flex;
     justify-content: space-between;
@@ -35,7 +29,7 @@
     background-color: white;
     margin-right: 10vw;
 
-    transition: all .2s;
+    transition: transform .2s ease-in;
   }
 
   &__overlay {
@@ -47,6 +41,6 @@
     overflow-y: scroll;
     overscroll-behavior: contain;
 
-    transition: all .2s;
+    transition: opacity .2s ease-in, visibility .2s ease-in;
   }
 }
