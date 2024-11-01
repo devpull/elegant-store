@@ -1,5 +1,5 @@
 .newsletter {
-  background-color: var(--clr-newsletter-back);
+  background-color: var(--clr-newsletter-back-darker);
 
   .container {
     display: flex;
@@ -25,6 +25,7 @@
 
     @include media("md") {
       background-image: none;
+      background-color: var(--clr-newsletter-back);
     }
   }
 
