@@ -2,15 +2,86 @@
   <div class="menu-mobile__overlay">
     <div class="menu-mobile__container">
       <div class="menu-mobile__row">
-        <p>Here's menu</p>
-        <button class="menu-mobile__close" aria-label="Закрыть основное меню.">
-          <svg class="svg-icons--close-dims">
-            <use
-              xlink:href="{{root}}img/svg/symbol.sprite.svg#icons--close"
-            ></use>
-          </svg>
-        </button>
+        <div><a class="menu-mobile__logo" href="#!">3elegant<span>.</span></a></div>
+        <div>
+          <button
+            class="menu-mobile__close"
+            aria-label="Закрыть основное меню."
+          >
+            <svg class="svg-icons--close-dims">
+              <use
+                xlink:href="{{root}}img/svg/symbol.sprite.svg#icons--close"
+              ></use>
+            </svg>
+          </button>
+        </div>
       </div>
+      <div class="m-search">
+        <svg class="svg-icons--search-dims">
+          <use
+            xlink:href="{{root}}img/svg/symbol.sprite.svg#icons--search"
+          ></use>
+        </svg>
+        <input
+          class="m-search__input"
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Поиск"
+        />
+      </div>
+      <nav>
+        <ul class="m-nav__list">
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#!">Домой</a>
+          </li>
+          <li class="m-nav__item m-nav__item--has-children">
+            <a class="m-nav__link" href="#!">Магазин</a>
+            <div class="m-nav__expander"></div>
+          </li>
+          <li class="m-nav__item m-nav__item--has-children">
+            <a class="m-nav__link" href="#!">Продукт</a>
+            <div class="m-nav__expander"></div>
+          </li>
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#!">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="m-user">
+        <ul>
+          <li>
+            <a href="#!" class="menu-mobile__user-link" aria-label="Корзина"
+              >Корзина
+              <div>
+                <svg class="svg-icons--cart-dims" aria-hidden="true">
+                  <use
+                    xlink:href="./img/svg/symbol.sprite.svg#icons--cart"
+                  ></use>
+                </svg>
+                <span class="main-nav__badge">2</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#!"
+              class="menu-mobile__user-link"
+              aria-label="Список понравившегося"
+              >Понравилось
+              <div>
+                <svg class="svg-icons--fav-dims" aria-hidden="true">
+                  <use
+                    xlink:href="./img/svg/symbol.sprite.svg#icons--fav"
+                  ></use>
+                </svg>
+                <span class="main-nav__badge">2</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </section>
