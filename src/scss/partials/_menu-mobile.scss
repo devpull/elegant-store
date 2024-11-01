@@ -137,6 +137,11 @@
     min-width: 3rem;
     display: flex;
     align-items: center;
+    transition: all .05s;
+
+    &:active {
+      background-color: var(--clr-neutral-03);
+    }
 
     &::after {
       position: absolute;
