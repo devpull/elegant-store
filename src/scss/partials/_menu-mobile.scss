@@ -209,7 +209,7 @@
   margin-bottom: rem(16);
 
   &:focus-visible {
-    border: 2px solid var(--clr-white);
+    border: 1px solid var(--clr-white);
     outline: 2px solid var(--clr-btn-focus-light);
   }
 }
