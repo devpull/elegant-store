@@ -37,6 +37,7 @@ export function init(opt) {
     e.stopPropagation(); // Stop bubbling to overlay. Prevents closing.
   });
   window.addEventListener("resize", operateVisibility);
+  body.addEventListener("keyup", closeOnEscape);
 }
 
 function operateVisibility() {
@@ -77,6 +78,12 @@ function toggleMenu() {
   }
 
   console.log("isMenuHidden: ", isMenuHidden);
+}
+
+function closeOnEscape(e) {
+  if(bMenuHidden() === false && e.code === "Escape") {
+    menuClose();
+  }
 }
 
 function bMenuHidden() {
