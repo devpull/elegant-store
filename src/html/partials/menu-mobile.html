@@ -2,7 +2,9 @@
   <div class="menu-mobile__overlay">
     <div class="menu-mobile__container">
       <div class="menu-mobile__row">
-        <div><a class="menu-mobile__logo" href="#!">3elegant<span>.</span></a></div>
+        <div>
+          <a class="menu-mobile__logo" href="#!">3elegant<span>.</span></a>
+        </div>
         <div>
           <button
             class="menu-mobile__close"
@@ -50,38 +52,63 @@
       </nav>
 
       <nav class="m-user">
-        <ul>
-          <li>
-            <a href="#!" class="menu-mobile__user-link" aria-label="Корзина"
+        <ul class="m-user__list">
+          <li class="m-user__item">
+            <a
+              class="m-user__link"
+              href="#!"
+              class="menu-mobile__user-link"
+              aria-label="Корзина"
               >Корзина
-              <div>
+              <div class="m-user__btn-wrap">
                 <svg class="svg-icons--cart-dims" aria-hidden="true">
                   <use
                     xlink:href="./img/svg/symbol.sprite.svg#icons--cart"
                   ></use>
                 </svg>
-                <span class="main-nav__badge">2</span>
+                <span class="m-user__badge">2</span>
               </div>
             </a>
           </li>
-          <li>
+          <li class="m-user__item">
             <a
+              class="m-user__link"
               href="#!"
               class="menu-mobile__user-link"
               aria-label="Список понравившегося"
               >Понравилось
-              <div>
+              <div class="m-user__btn-wrap">
                 <svg class="svg-icons--fav-dims" aria-hidden="true">
                   <use
                     xlink:href="./img/svg/symbol.sprite.svg#icons--fav"
                   ></use>
                 </svg>
-                <span class="main-nav__badge">2</span>
+                <span class="m-user__badge">2</span>
               </div>
             </a>
           </li>
         </ul>
       </nav>
+
+      <button class="m-signin btn">Войти</button>
+
+      <div class="m-social">
+        <a class="m-social__link" href="#!" aria-label="Инстаграм">
+          <svg class="m-social__icon svg-socials--instagram-dims">
+            <use xlink:href="{{root}}img/svg/symbol.sprite.svg#socials--instagram"></use>
+          </svg>
+        </a>
+        <a class="m-social__link" href="#!" aria-label="Фейсбук">
+          <svg class="m-social__icon svg-socials--facebook-dims">
+            <use xlink:href="{{root}}img/svg/symbol.sprite.svg#socials--facebook"></use>
+          </svg>
+        </a>
+        <a class="m-social__link" href="#!" aria-label="Ютуб">
+          <svg class="m-social__icon svg-socials--youtube-dims">
+            <use xlink:href="{{root}}img/svg/symbol.sprite.svg#socials--youtube"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>

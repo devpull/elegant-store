@@ -29,7 +29,7 @@ export function init(opt) {
   menuBtnClose.addEventListener("click", menuClose);
   menuOverlay.addEventListener("click", menuClose);
   menuContainer.addEventListener("click", (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // Stop bubbling to overlay. Prevents closing.
   });
   window.addEventListener("resize", operateVisibility);
 }
