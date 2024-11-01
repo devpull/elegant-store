@@ -4,26 +4,31 @@ let options = {
     menuBtnOpenClass: "main-nav__hamburger-btn",
     menuContainerClass: "menu-mobile__container",
     menuOverlayClass: "menu-mobile__overlay",
+    menuOpenFocusClass: "menu-mobile__logo",
     widthLimit: 900,
     hiddenClass: "hidden",
     noScrollClass: "no-scroll",
   },
   body,
   menu,
+  isMenuHidden,
   menuBtnOpen,
   menuBtnClose,
   menuOverlay,
-  menuContainer;
+  menuContainer,
+  menuOpenFocusEl;
 
 export function init(opt) {
   options = { ...options, ...opt };
 
   body = document.body;
+  isMenuHidden = true;
   menu = document.querySelector("." + options.menuClass);
   menuBtnOpen = document.querySelector("." + options.menuBtnOpenClass);
   menuBtnClose = document.querySelector("." + options.menuBtnCloseClass);
   menuOverlay = document.querySelector("." + options.menuOverlayClass);
   menuContainer = document.querySelector("." + options.menuContainerClass);
+  menuOpenFocusEl = document.querySelector("." + options.menuOpenFocusClass);
 
   menuBtnOpen.addEventListener("click", toggleMenu);
   menuBtnClose.addEventListener("click", menuClose);
@@ -47,15 +52,20 @@ function operateVisibility() {
 function menuOpen() {
   menu.setAttribute("aria-hidden", "false");
   body.classList.add(options.noScrollClass);
+  setTimeout(()=> {
+    menuOpenFocusEl.focus();
+  }, 200);
+  console.log(menuOpenFocusEl);
 }
 
 function menuClose() {
   menu.setAttribute("aria-hidden", "true");
   body.classList.remove(options.noScrollClass);
+  menuBtnOpen.focus();
 }
 
 function toggleMenu() {
-  let isMenuHidden = menu.getAttribute("aria-hidden").toLowerCase() === "true";
+  let isMenuHidden = bMenuHidden();
 
   // opening menu only withing certain width range
   if (window.innerWidth <= options.widthLimit && isMenuHidden === true) {
@@ -67,4 +77,8 @@ function toggleMenu() {
   }
 
   console.log("isMenuHidden: ", isMenuHidden);
+}
+
+function bMenuHidden() {
+  return menu.getAttribute("aria-hidden").toLowerCase() === "true";
 }

@@ -17,9 +17,10 @@
     opacity: .5;
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--clr-btn-focus-light);
-  }
+  // &:focus-visible {
+  //   border: 1px solid var(--clr-white);
+  //   outline: 2px solid var(--clr-btn-focus-light);
+  // }
 
   &--m {
     padding: em(12, 18) em(56, 18);
