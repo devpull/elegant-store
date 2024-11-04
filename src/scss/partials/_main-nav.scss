@@ -62,6 +62,7 @@
     align-items: center;
 
     &--has-children::after {
+      cursor: pointer;
       max-height: rem(24);
       display: inline-block;
       transform: translateY(rem(4));
@@ -83,7 +84,7 @@
   &__list-button {
     all: unset;
     display: revert;
-    cursor: revert;
+    cursor: pointer;
     height: rem(24);
     font-family: var(--font-secondary);
     font-weight: 600;
