@@ -1,3 +1,7 @@
+body:has(.menu-mobile[aria-hidden="false"]) {
+  overflow: hidden;
+}
+
 .menu-mobile {
 
   // Overlay hidden

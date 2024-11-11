@@ -7,7 +7,6 @@ let options = {
     menuOpenFocusClass: "menu-mobile__logo",
     widthLimit: 900,
     hiddenClass: "hidden",
-    noScrollClass: "no-scroll",
   },
   body,
   menu,
@@ -52,7 +51,6 @@ function operateVisibility() {
 
 function menuOpen() {
   menu.setAttribute("aria-hidden", "false");
-  body.classList.add(options.noScrollClass);
   setTimeout(()=> {
     menuOpenFocusEl.focus();
   }, 200);
@@ -61,7 +59,6 @@ function menuOpen() {
 
 function menuClose() {
   menu.setAttribute("aria-hidden", "true");
-  body.classList.remove(options.noScrollClass);
   menuBtnOpen.focus();
 }
 
